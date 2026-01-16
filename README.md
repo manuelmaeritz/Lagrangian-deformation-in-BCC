@@ -2,11 +2,13 @@
 This repository contains the code for lagrangian particle tracking in a laminar flow through an array of beads in a body-center cubic structure as well as the code to compute the fluid deformations in the vicinity of the particles.
 The streamlines are computed by numerically solving the ODE
 
-$$\frac{d \mathbf{r}}{dt}=\pmb{u}(\pmb{r})$$
+$$\frac{d \mathbf{r}}{dt}=\mathbf{u}(\mathbf{r})$$
 
 with a Runge-Kutta method of order 4. The fluid deformations are quantified by the deformation gradient tensor $\pmb{F}$ that integrates first order velocity flucutations along the particle trajectories
-$$\frac{d \pmb{F}}{dt}=\pmb{\epsilon} \pmb{F}$$,
-where $\pmb{\epsilon}=\nabla \pmb{u}$. Here the deformation gradient tensor is computed in the so called Protean coordinates as described in [Lester et al. 2018; JFM]. In this coordinate frame the deformation gradient tensor is an upper triangular matrix.
+
+$$\frac{d \mathbf{F}}{dt}=\mathbf{\epsilon} \mathbf{F}$$,
+
+where $\mathbf{\epsilon}=\nabla \mathbf{u}$. Here the deformation gradient tensor is computed in the so called Protean coordinates as described in [Lester et al. 2018; JFM]. In this coordinate frame the deformation gradient tensor is an upper triangular matrix.
 
 ## General workflow
 Here we describe the general workflow boiled down to the most essential commands. A more detailed explaination of the individual modules is provided further down. A complete working script containing all the below steps can be found in `apps/create_ensemble.py`
