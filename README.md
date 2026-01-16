@@ -1,7 +1,9 @@
 # Lagrangian deformation in BCC-flow
 This repository contains the code for lagrangian particle tracking in a laminar flow through an array of beads in a body-center cubic structure as well as the code to compute the fluid deformations in the vicinity of the particles.
 The streamlines are computed by numerically solving the ODE
+
 $$\frac{d \pmb{r}}{dt}=\pmb{u}(\pmb{r})$$
+
 with a Runge-Kutta method of order 4. The fluid deformations are quantified by the deformation gradient tensor $\pmb{F}$ that integrates first order velocity flucutations along the particle trajectories
 $$\frac{d \pmb{F}}{dt}=\pmb{\epsilon} \pmb{F}$$,
 where $\pmb{\epsilon}=\nabla \pmb{u}$. Here the deformation gradient tensor is computed in the so called Protean coordinates as described in [Lester et al. 2018; JFM]. In this coordinate frame the deformation gradient tensor is an upper triangular matrix.
