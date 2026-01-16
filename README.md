@@ -2,7 +2,7 @@
 This repository contains the code for lagrangian particle tracking in a laminar flow through an array of beads in a body-center cubic structure as well as the code to compute the fluid deformations in the vicinity of the particles.
 The streamlines are computed by numerically solving the ODE
 
-$$\frac{d \pmb{r}}{dt}=\pmb{u}(\pmb{r})$$
+$$\frac{d \mathbf{r}}{dt}=\pmb{u}(\pmb{r})$$
 
 with a Runge-Kutta method of order 4. The fluid deformations are quantified by the deformation gradient tensor $\pmb{F}$ that integrates first order velocity flucutations along the particle trajectories
 $$\frac{d \pmb{F}}{dt}=\pmb{\epsilon} \pmb{F}$$,
